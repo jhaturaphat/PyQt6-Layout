@@ -1,5 +1,5 @@
-from PyQt6.QtWidgets import QFrame, QVBoxLayout, QLabel, QListWidget, QListWidgetItem
-from PyQt6.QtCore import QSize, Qt
+from PyQt6.QtWidgets import QApplication, QFrame, QVBoxLayout, QLabel, QListWidget, QListWidgetItem
+from PyQt6.QtCore import QSize, Qt, QCoreApplication
 
 class Sidebar(QFrame):
     def __init__(self):
@@ -33,3 +33,14 @@ class Sidebar(QFrame):
         item = QListWidgetItem(f"{icon} {name}")
         item.setSizeHint(QSize(100, 40))
         self.sidebar_list.addItem(item)
+
+
+
+    # Run Test
+# app = QCoreApplication.instance()
+# if app is None:
+#     app = QApplication([])
+    
+#     window = Sidebar()
+#     window.show()
+#     app.exec()

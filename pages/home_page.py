@@ -1,6 +1,6 @@
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QApplication
 from PyQt6.QtGui import QFont
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, QCoreApplication
 
 class HomePage(QWidget):
     def __init__(self):
@@ -16,3 +16,10 @@ class HomePage(QWidget):
             layout.addWidget(QLabel(f"นี่คือรายการเนื้อหาหน้าหลัก {i}"))
         
         layout.addStretch()
+
+# Run Test
+if __name__ == "__main__":
+    app = QApplication([])
+    window = HomePage()
+    window.show()
+    app.exec()

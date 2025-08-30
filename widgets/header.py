@@ -1,4 +1,5 @@
-from PyQt6.QtWidgets import QFrame, QHBoxLayout, QLabel, QPushButton
+from PyQt6.QtWidgets import QFrame, QHBoxLayout, QLabel, QPushButton , QApplication
+# from PyQt6.QtCore import Qt, QCoreApplication
 
 class Header(QFrame):
     def __init__(self, title="หน้าหลัก"):
@@ -35,3 +36,12 @@ class Header(QFrame):
     def set_title(self, title):
         """ตั้งค่าชื่อเรื่อง"""
         self.header_title.setText(title)
+
+    
+
+# Run Test
+if __name__ == "__main__":
+    app = QApplication([])
+    window = Header()
+    window.show()
+    app.exec()

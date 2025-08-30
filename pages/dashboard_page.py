@@ -1,10 +1,12 @@
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QPushButton
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QPushButton, QApplication
 from PyQt6.QtGui import QFont
 from PyQt6.QtCore import Qt
 
 class DashboardPage(QWidget):
     def __init__(self):
         super().__init__()
+        # self.setMinimumWidth(100)
+        # self.setMaximumWidth(200)
         layout = QVBoxLayout(self)
         title = QLabel("แดชบอร์ด")
         title.setFont(QFont("Tahoma", 16))
@@ -16,3 +18,11 @@ class DashboardPage(QWidget):
             layout.addWidget(QPushButton(f"ปุ่มแดชบอร์ด {i}"))
         
         layout.addStretch()
+
+
+# Run Test
+if __name__ == "__main__":
+    app = QApplication([])
+    window = DashboardPage()
+    window.show()
+    app.exec()

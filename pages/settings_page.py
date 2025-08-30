@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel
+from PyQt6.QtWidgets import QWidget, QVBoxLayout, QLabel, QApplication
 from PyQt6.QtGui import QFont
 from PyQt6.QtCore import Qt
 
@@ -16,4 +16,12 @@ class SettingsPage(QWidget):
             layout.addWidget(QLabel(f"ตัวเลือกการตั้งค่า {i}"))
         
         layout.addStretch()
+
+
+# Run Test
+if __name__ == "__main__":
+    app = QApplication([])
+    window = SettingsPage()
+    window.show()
+    app.exec()
         
