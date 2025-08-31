@@ -4,9 +4,7 @@ from PyQt6.QtCore import Qt
 
 class DashboardPage(QWidget):
     def __init__(self):
-        super().__init__()
-        # self.setMinimumWidth(100)
-        # self.setMaximumWidth(200)
+        super().__init__()        
         layout = QVBoxLayout(self)
         title = QLabel("แดชบอร์ด")
         title.setFont(QFont("Tahoma", 16))
